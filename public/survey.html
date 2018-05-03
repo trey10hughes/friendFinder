@@ -10,7 +10,6 @@
 
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="friendsUser.js"></script>
 
 </head>
 
@@ -20,7 +19,7 @@
     <div class="container">
 
 
-        <h3>Answer the 10 questions below and we'll match you with new friends!</h3>
+        <h3>Get started on the survey below and we'll newFriend you with a new friend!</h3>
 
 
         <hr>
@@ -31,16 +30,16 @@
             </div>
             <div class="form-group">
                 <label for="user">Link to Photo Image: (Required)</label>
-                <input type="text" class="form-control" id="species" placeholder="What's your species?">
+                <input type="text" class="form-control" id="photo" placeholder="Link to photo of you">
             </div>
             
             <hr>
-            <h3>Answer the following:</h3>
+            <h3>Pick an answer based on how strongly you Agree or Disagree with the following statements.</h3>
             <hr>
 
             <div class="row col-lg-12">
-                <h4>Question 1: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 1: </h4>
+                <h4>I like to solve complex problems.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q1">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -53,8 +52,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 2: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 2: </h4>
+                <h4>I trust others.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q2">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -67,8 +66,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 3: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 3: </h4>
+                <h4>I dislike being the center of attention.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q3">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -81,8 +80,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 4: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 4: </h4>
+                <h4>I try to follow the rules.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q4">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -95,8 +94,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 5: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 5: </h4>
+                <h4>I become overwhelmed by events.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q5">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -109,8 +108,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 6: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 6: </h4>
+                <h4>I warm up quickly to others.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q6">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -123,8 +122,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 7: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 7: </h4>
+                <h4>I talk to a lot of different people at parties.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q7">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -137,8 +136,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 8: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 8: </h4>
+                <h4>I try to lead others.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q8">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -151,8 +150,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 9: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 9: </h4>
+                <h4>I believe that others have good intentions.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q9">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -165,8 +164,8 @@
             </div>
 
             <div class="row col-lg-12">
-                <h4>Question 10: </h4>
-                <h4>question goes here</h4>
+                <h4>Statement 10: </h4>
+                <h4>I keep my promises.</h4>
                 <div class="form-group col-xs-3">
                     <select class="form-control" id="q10">
                         <option value="1">1 (Strongly Disagree)</option>
@@ -191,37 +190,31 @@
 
         <br>
 
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button> -->
-
-        <!--use jQuery to trigger the modal-->
+        
 
         <!-- Modal -->
-        <div class="modal" id="bestieModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
+        <div id="newFriend-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        
+                <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="bestieModalLabel"></h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <!--      <span aria-hidden="true">×</span> -->
-                        </button>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">
+                            <strong>Best Match</strong>
+                        </h2>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col">
-                                <img src="" class="img-thumbnail" id="bestieImg" alt="Alien Bestie Image">
-                            </div>
-                            <div class="col" id="bestieText">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Return to Survey</button>
-                        </div>
+                        <h2 id="newFriend-name"></h2>
+                        <img id="newFriend-img" style="width:500px;height:600px;" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
+        
             </div>
+        </div>
 
 
 
@@ -229,6 +222,51 @@
 
 
 
+
+<script type="text/javascript">
+    
+
+    // Capture the form inputs
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+            // Create an object for the users data based on their responses
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+            console.log("user data: " + userData);
+
+            $.post("/api/friends", userData, function (data) {
+
+                console.log("new friend name: " + data.name);
+
+                $("#newFriend-name").text(data.name);
+                $("#newFriend-img").attr("src", data.photo);
+
+                // toggle the modal
+                $("#newFriend-modal").modal("toggle");
+
+            });
+        
+    });
+</script>
+
+</body>
+
+</html>
 
 
 
@@ -239,5 +277,6 @@
                 " crossorigin="anonymous "></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl
                 " crossorigin="anonymous "></script>
+ 
 	</body>
 </html>
